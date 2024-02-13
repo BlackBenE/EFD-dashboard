@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Vue Avant Livraison Mâle Avec Emballage _ Photo Premium.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Vue Avant Livraison Mâle Avec Emballage _ Photo Premium 1.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Vue Avant Livraison Mâle Avec Emballage _ Photo Premium 2.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeliveryDriversViewController" customModule="EFD_dashboard" customModuleProvider="target">
+            <connections>
+                <outlet property="activeDriverLable" destination="iYu-9e-X5e" id="Ljh-ha-qSd"/>
+                <outlet property="activeDriverTableView" destination="WR5-yB-04e" id="7gh-4K-NaY"/>
+                <outlet property="allDriversLabel" destination="gzy-9R-dhS" id="jCP-Gu-06E"/>
+                <outlet property="allDriversTableView" destination="eit-Pu-1wl" id="p2d-7v-KT7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-yB-04e">
+                    <rect key="frame" x="10" y="108" width="1160" height="235"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="235" id="22s-C9-nmN"/>
+                    </constraints>
+                    <color key="separatorColor" systemColor="systemBlueColor"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eit-Pu-1wl">
+                    <rect key="frame" x="10" y="412" width="1160" height="338"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livreurs Actifs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYu-9e-X5e">
+                    <rect key="frame" x="10" y="76" width="125" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous les livreurs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzy-9R-dhS">
+                    <rect key="frame" x="10" y="380" width="140" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WR5-yB-04e" firstAttribute="top" secondItem="iYu-9e-X5e" secondAttribute="bottom" constant="8" symbolic="YES" id="6mk-Bg-hiv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eit-Pu-1wl" secondAttribute="bottom" constant="50" id="7Id-2G-Tq0"/>
+                <constraint firstItem="WR5-yB-04e" firstAttribute="leading" secondItem="gzy-9R-dhS" secondAttribute="leading" id="EKT-jb-g7v"/>
+                <constraint firstItem="iYu-9e-X5e" firstAttribute="leading" secondItem="eit-Pu-1wl" secondAttribute="leading" id="Ga2-PC-goe"/>
+                <constraint firstItem="eit-Pu-1wl" firstAttribute="top" secondItem="gzy-9R-dhS" secondAttribute="bottom" constant="8" symbolic="YES" id="Ik6-iu-AwL"/>
+                <constraint firstItem="WR5-yB-04e" firstAttribute="leading" secondItem="iYu-9e-X5e" secondAttribute="leading" id="SHM-xO-cm3"/>
+                <constraint firstItem="iYu-9e-X5e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="TWp-VS-uvc"/>
+                <constraint firstItem="iYu-9e-X5e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="52" id="Wx3-X9-uVZ"/>
+                <constraint firstItem="gzy-9R-dhS" firstAttribute="top" secondItem="WR5-yB-04e" secondAttribute="bottom" constant="37" id="eU3-8s-76Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eit-Pu-1wl" secondAttribute="trailing" constant="10" id="h1e-mf-quL"/>
+                <constraint firstItem="WR5-yB-04e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sST-wc-FWG"/>
+            </constraints>
+            <point key="canvasLocation" x="105.76271186440678" y="19.756097560975608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

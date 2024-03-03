@@ -10,9 +10,10 @@ import UIKit
 class DeliveryDriversTableViewCell: UITableViewCell {
     
     @IBOutlet var cardView: UIView!
-    @IBOutlet var photoDeeliveryDriver: UIImageView!
-    @IBOutlet var deliveryDriverName: UILabel!
-    @IBOutlet var deliveryDriverShippingNumber: UILabel!
+    @IBOutlet weak var DriverLastName: UILabel!
+    @IBOutlet weak var driverFirstName: UILabel!
+    @IBOutlet weak var DriverEmail: UILabel!
+    
     var imageTask: URLSessionDataTask?
     
     override func awakeFromNib() {
@@ -21,8 +22,10 @@ class DeliveryDriversTableViewCell: UITableViewCell {
     }
     
     func redraw(with driver: Driver){
-        deliveryDriverName.text = driver.firstName
-        deliveryDriverShippingNumber.text = driver.lastName
+        driverFirstName.text = driver.firstName
+        DriverLastName.text = driver.lastName
+        DriverEmail.text = driver.email
+
         
         
     }

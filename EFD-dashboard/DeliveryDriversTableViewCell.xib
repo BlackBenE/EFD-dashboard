@@ -11,34 +11,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="233" id="KGk-i7-Jjw" customClass="DeliveryDriversTableViewCell" customModule="EFD_dashboard" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="310" height="233"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="KGk-i7-Jjw" customClass="DeliveryDriversTableViewCell" customModule="EFD_dashboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1286" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="310" height="233"/>
+                <rect key="frame" x="0.0" y="0.0" width="1286" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMC-Y7-LJq">
-                        <rect key="frame" x="12" y="9" width="286" height="214"/>
+                        <rect key="frame" x="20" y="21" width="1246" height="114"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RSX-aB-zsh">
-                                <rect key="frame" x="23" y="15" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="6Wx-Fr-rom"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWu-I3-BgW">
-                                <rect key="frame" x="125.5" y="153" width="41.5" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="ofC-hH-Zk3"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97D-Hv-jd9">
+                                <rect key="frame" x="33" y="47" width="41.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97D-Hv-jd9">
-                                <rect key="frame" x="122" y="181" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QK-tY-O3Y">
+                                <rect key="frame" x="1175.5" y="47" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WT1-0x-Ojg">
+                                <rect key="frame" x="268.5" y="46" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -47,33 +44,31 @@
                         <color key="tintColor" systemColor="linkColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="DriverCell"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="97D-Hv-jd9" secondAttribute="bottom" constant="12" id="0bN-Ck-0gG"/>
-                            <constraint firstItem="RSX-aB-zsh" firstAttribute="leading" secondItem="rMC-Y7-LJq" secondAttribute="leading" constant="23" id="2zN-wg-Isr"/>
-                            <constraint firstItem="RSX-aB-zsh" firstAttribute="centerX" secondItem="rMC-Y7-LJq" secondAttribute="centerX" id="Fsi-6c-RhB"/>
-                            <constraint firstItem="97D-Hv-jd9" firstAttribute="top" secondItem="cWu-I3-BgW" secondAttribute="bottom" constant="10" id="Up7-rQ-A6g"/>
-                            <constraint firstItem="RSX-aB-zsh" firstAttribute="top" secondItem="rMC-Y7-LJq" secondAttribute="top" constant="15" id="XpZ-5n-3gF"/>
-                            <constraint firstItem="cWu-I3-BgW" firstAttribute="leading" secondItem="97D-Hv-jd9" secondAttribute="leading" id="a3m-nV-i8X"/>
-                            <constraint firstItem="cWu-I3-BgW" firstAttribute="top" secondItem="RSX-aB-zsh" secondAttribute="bottom" constant="10" id="ejD-SY-uiy"/>
-                            <constraint firstItem="RSX-aB-zsh" firstAttribute="centerX" secondItem="97D-Hv-jd9" secondAttribute="centerX" id="k4a-Rm-5ld"/>
+                            <constraint firstItem="6QK-tY-O3Y" firstAttribute="top" secondItem="rMC-Y7-LJq" secondAttribute="top" constant="47" id="04T-f3-udJ"/>
+                            <constraint firstItem="97D-Hv-jd9" firstAttribute="top" secondItem="rMC-Y7-LJq" secondAttribute="top" constant="47" id="RHK-6T-T3A"/>
+                            <constraint firstItem="97D-Hv-jd9" firstAttribute="leading" secondItem="rMC-Y7-LJq" secondAttribute="leading" constant="33" id="aYi-gx-ywB"/>
+                            <constraint firstAttribute="trailing" secondItem="6QK-tY-O3Y" secondAttribute="trailing" constant="37" id="avu-P1-EII"/>
+                            <constraint firstItem="WT1-0x-Ojg" firstAttribute="leading" secondItem="97D-Hv-jd9" secondAttribute="trailing" constant="194" id="r3J-lH-JEg"/>
+                            <constraint firstItem="WT1-0x-Ojg" firstAttribute="top" secondItem="rMC-Y7-LJq" secondAttribute="top" constant="46" id="rHz-qN-2cP"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FeC-8F-0Dn"/>
-                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-4" id="YzN-wY-clV"/>
-                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-26" id="Z9I-md-zby"/>
-                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="eIU-4P-jeC"/>
+                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4gO-wK-4q8"/>
+                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6ye-cw-xbl"/>
+                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="mNM-nG-8Sd"/>
+                    <constraint firstItem="rMC-Y7-LJq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-14" id="wn7-qk-U3o"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <accessibility key="accessibilityConfiguration" identifier="DriverCell"/>
             <connections>
+                <outlet property="DriverEmail" destination="6QK-tY-O3Y" id="nxD-FZ-zHE"/>
+                <outlet property="DriverLastName" destination="97D-Hv-jd9" id="pc4-bM-2xg"/>
                 <outlet property="cardView" destination="rMC-Y7-LJq" id="zLN-RX-gRe"/>
-                <outlet property="deliveryDriverName" destination="cWu-I3-BgW" id="tZi-OM-PUc"/>
-                <outlet property="deliveryDriverShippingNumber" destination="97D-Hv-jd9" id="Cqc-pK-feu"/>
-                <outlet property="photoDeeliveryDriver" destination="RSX-aB-zsh" id="bon-fx-7CC"/>
+                <outlet property="driverFirstName" destination="WT1-0x-Ojg" id="9da-LZ-rro"/>
             </connections>
-            <point key="canvasLocation" x="101.70731707317073" y="67.881355932203391"/>
+            <point key="canvasLocation" x="458.78048780487802" y="47.79661016949153"/>
         </tableViewCell>
     </objects>
     <resources>

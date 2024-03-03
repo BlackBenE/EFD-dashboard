@@ -8,7 +8,7 @@
 import Foundation
 
 class Driver {
-    var id: String
+    var id: String?
     var firstName: String
     var lastName: String
     var email: String
@@ -16,7 +16,7 @@ class Driver {
     var phoneNumber: String
     var role: String
     
-    init(id: String, firstName: String, lastName: String, email: String, password: String? = nil, phoneNumber: String, role: String) {
+    init( id: String?, firstName: String, lastName: String, email: String, password: String? = nil, phoneNumber: String, role: String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName

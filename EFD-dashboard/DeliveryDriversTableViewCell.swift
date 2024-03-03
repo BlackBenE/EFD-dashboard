@@ -19,11 +19,11 @@ class DeliveryDriversTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.cardView.layer.cornerRadius = 10
     }
-
+    
     func redraw(with driver: Driver){
         deliveryDriverName.text = driver.firstName
+        deliveryDriverShippingNumber.text = driver.lastName
+        
+        
     }
-    
-    
-    
 }

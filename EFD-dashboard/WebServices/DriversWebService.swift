@@ -8,15 +8,11 @@
 import Foundation
 
 class DriversWebService{
-    
-    class DriverWebService {
-        
         // Get all drivers
         class func getAll(completion: @escaping ([Driver]?, Error?) -> Void) {
             guard let url = URL(string: "http://localhost:3000/driver") else {
                 return
             }
-            
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard error == nil, let d = data else {
                     completion(nil, error)
@@ -28,12 +24,12 @@ class DriversWebService{
                     return
                 }
                 
+                print(json)
                 let drivers = json.compactMap(DriverFactory.driver(from:))
                 completion(drivers, nil)
             }
             task.resume()
         }
-    }
     
     // Create
     class func create(driver: Driver, completion: @escaping (Driver?, Error?) -> Void) {

@@ -45,6 +45,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <color key="tintColor" systemColor="linkColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="DriverCell"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="97D-Hv-jd9" secondAttribute="bottom" constant="12" id="0bN-Ck-0gG"/>
                             <constraint firstItem="RSX-aB-zsh" firstAttribute="leading" secondItem="rMC-Y7-LJq" secondAttribute="leading" constant="23" id="2zN-wg-Isr"/>
@@ -65,6 +66,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <accessibility key="accessibilityConfiguration" identifier="DriverCell"/>
             <connections>
                 <outlet property="cardView" destination="rMC-Y7-LJq" id="zLN-RX-gRe"/>
                 <outlet property="deliveryDriverName" destination="cWu-I3-BgW" id="tZi-OM-PUc"/>

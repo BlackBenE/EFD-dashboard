@@ -8,6 +8,14 @@
 import UIKit
 
 class TourDetailsViewController: UIViewController {
+    
+    var round : Round?
+
+    static func newInstance(round: Round) -> TourDetailsViewController {
+        let controller = TourDetailsViewController()
+        controller.round = round
+        return controller
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +23,5 @@ class TourDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

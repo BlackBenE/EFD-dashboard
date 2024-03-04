@@ -12,19 +12,26 @@ class RoundWebService {
     // Get all rounds
     class func getAll(completion: @escaping ([Round]?, Error?) -> Void) {
         guard let url = URL(string: "http://localhost:3000/rounds") else {
+            print("Invalid URL")
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error)")
+            }
             guard error == nil, let d = data else {
                 completion(nil, error)
                 return
             }
             
             guard let json = try? JSONSerialization.jsonObject(with: d) as? [[String: Any]] else {
+                print("Invalid JSON")
                 completion(nil, NSError(domain: "com.esgi.album.invalid-json", code: 1))
                 return
             }
+            
+            print("Received JSON: \(json)")
             
             let rounds = json.compactMap(RoundFactory.round(from:))
             completion(rounds, nil)

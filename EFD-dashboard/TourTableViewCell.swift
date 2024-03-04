@@ -23,7 +23,8 @@ class TourTableViewCell: UITableViewCell {
     
     func redraw(with round: Round){
         TourId.text = round.id
-        //        TourDriver.text = ro
+        TourDriver.text = round.driver
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none

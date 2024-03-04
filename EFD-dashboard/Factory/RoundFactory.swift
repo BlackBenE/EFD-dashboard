@@ -7,25 +7,21 @@
 
 import Foundation
 
-
 class RoundFactory {
     static func round(from json: [String: Any]) -> Round? {
         guard let id = json["_id"] as? String,
               let dateString = json["date"] as? String,
-              let driverId = json["driver"] as? String, // Récupérez l'ID du driver
-              let deliveriesData = json["deliveries"] as? [[String: Any]] else {
+              let deliveriesData = json["deliveries"] as? [String] else {
             return nil
         }
+        
+        let driverId = json["driver"] as? String
         
         let dateFormatter = ISO8601DateFormatter()
         guard let date = dateFormatter.date(from: dateString) else {
             return nil
         }
         
-        let deliveries = deliveriesData.compactMap(DeliveryFactory.delivery(from:))
-        
-        let driver = Driver(id: driverId, firstName: "", lastName: "", email: "", phoneNumber: "", role: "")
-        
-        return Round(id: id, date: date, driver: driver, deliveries: deliveries)
+        return Round(id: id, date: date, driver: driverId, deliveries: deliveriesData)
     }
 }

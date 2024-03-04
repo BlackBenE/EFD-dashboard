@@ -66,7 +66,14 @@ class DriverDetailsViewController: UIViewController {
     
     @IBAction func DriverDeleteButton(_ sender: UIButton) {
         
-        DriversWebService.delete(driver: driver!) { error in
+        guard let driver = driver else {
+            let alert = UIAlertController(title: "Erreur", message: "Échec de suppréssion de l'utilisateur: Pas d'utilisateur à supprimer.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+                return
+            }
+
+        DriversWebService.delete(driver: driver) { error in
             DispatchQueue.main.async {
                 if let error = error {
                     let alert = UIAlertController(title: "Erreur", message: "Échec de la suppression du conducteur : \(error)", preferredStyle: .alert)

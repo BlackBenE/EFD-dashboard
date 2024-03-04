@@ -10,9 +10,9 @@ import UIKit
 class DeliveryDriversTableViewCell: UITableViewCell {
     
     @IBOutlet var cardView: UIView!
-    @IBOutlet weak var DriverLastName: UILabel!
-    @IBOutlet weak var driverFirstName: UILabel!
-    @IBOutlet weak var DriverEmail: UILabel!
+    @IBOutlet var DriverLastName: UILabel!
+    @IBOutlet var driverFirstName: UILabel!
+    @IBOutlet var DriverEmail: UILabel!
     
     var imageTask: URLSessionDataTask?
     

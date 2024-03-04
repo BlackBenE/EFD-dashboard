@@ -26,7 +26,7 @@ class RoundWebService {
                 return
             }
             
-            let rounds = json.compactMap(RoundFactory.createRound(from:))
+            let rounds = json.compactMap(RoundFactory.round(from:))
             completion(rounds, nil)
         }
         task.resume()
@@ -49,7 +49,7 @@ class RoundWebService {
                 return
             }
             
-            let round = RoundFactory.createRound(from: json)
+            let round = RoundFactory.round(from: json)
             completion(round, nil)
         }
         task.resume()
@@ -78,7 +78,7 @@ class RoundWebService {
                 return
             }
             
-            let round = RoundFactory.createRound(from: json)
+            let round = RoundFactory.round(from: json)
             completion(round, nil)
         }
         task.resume()
@@ -107,7 +107,7 @@ class RoundWebService {
                 return
             }
             
-            let round = RoundFactory.createRound(from: json)
+            let round = RoundFactory.round(from: json)
             completion(round, nil)
         }
         task.resume()

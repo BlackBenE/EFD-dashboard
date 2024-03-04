@@ -20,7 +20,7 @@ class AdminFactory {
             return nil
         }
         
-        let admin = Admin(id: id, firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber,  role: role )
+        let admin = Admin(id: id, firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber, role: role )
         return admin
     }
 }

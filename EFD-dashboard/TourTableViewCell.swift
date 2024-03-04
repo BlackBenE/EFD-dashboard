@@ -23,18 +23,18 @@ class TourTableViewCell: UITableViewCell {
     
     func redraw(with round: Round){
         TourId.text = round.id
-        TourDriver.text = round.driver
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         TourDate.text = dateFormatter.string(from: round.date)
-        
-        
-        
+
+        if let driver = round.driver {
+            TourDriver.text = "\(driver.firstName) \(driver.lastName)"
+        } else {
+            TourDriver.text = "Pas de chauffeur assigné"
+        }
     }
-    
-    
     
     
     

@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TourDetailsViewController" customModule="EFD_dashboard" customModuleProvider="target">
             <connections>
+                <outlet property="DriverFirstName" destination="LIA-Fk-j9n" id="43D-ii-bH0"/>
+                <outlet property="TourId" destination="lqN-jE-spc" id="TiH-Nh-Ddy"/>
+                <outlet property="TourTableView" destination="WCh-Rs-6SS" id="4B0-IV-dgy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,6 +55,9 @@
                             <color key="tintColor" red="0.92380841629999999" green="0.92380841629999999" blue="0.92380841629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Supprimer"/>
+                            <connections>
+                                <action selector="DeleteTourButton:" destination="-1" eventType="touchUpInside" id="0M9-i2-7gM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fb-oh-wPB">
                             <rect key="frame" x="454.5" y="674.5" width="87" height="34.5"/>
@@ -59,6 +65,9 @@
                             <color key="tintColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Modifier"/>
+                            <connections>
+                                <action selector="ModifiyTourButton:" destination="-1" eventType="touchUpInside" id="jUL-DC-Mqg"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOa-Vf-PNL">
                             <rect key="frame" x="629.5" y="674.5" width="147" height="34.5"/>
@@ -66,6 +75,9 @@
                             <color key="tintColor" red="0.92380841629999999" green="0.92380841629999999" blue="0.92380841629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Créer la tournée"/>
+                            <connections>
+                                <action selector="CreatTourButton:" destination="-1" eventType="touchUpInside" id="UWq-5L-f5Q"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnJ-UD-VBq">
                             <rect key="frame" x="889" y="89" width="179" height="35"/>
@@ -73,6 +85,9 @@
                             <color key="tintColor" red="0.92380841629999999" green="0.92380841629999999" blue="0.92380841629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Ajouter une livraison"/>
+                            <connections>
+                                <action selector="AddDeliveryButton:" destination="-1" eventType="touchUpInside" id="Uyv-6C-v77"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBrownColor"/>

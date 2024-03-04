@@ -6,27 +6,27 @@
 //
 
 
+
 import Foundation
 
-class Round {
+class Round: Codable {
     var id: String
     var date: Date
-    var driver: String? // Le driver est maintenant optionnel
-    var deliveries: [String] // Les deliveries sont maintenant un tableau de String
+    var deliveries: [Delivery]
+    var driver: Driver?
     
-    init(id: String, date: Date, driver: String?, deliveries: [String]) {
+    enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case date
+            case deliveries
+            case driver
+        }
+    
+    init(id: String, date: Date, deliveries: [Delivery], driver: Driver? = nil) {
         self.id = id
         self.date = date
-        self.driver = driver
         self.deliveries = deliveries
+        self.driver = driver
     }
-}
-
-
-extension Round {
-    func toDictionary() -> [String: Any] {
-        let dateFormatter = ISO8601DateFormatter()
-        let dateString = dateFormatter.string(from: date)
-        return ["date": dateString, "driver": driver ?? "", "deliveries": deliveries]
-    }
+    
 }

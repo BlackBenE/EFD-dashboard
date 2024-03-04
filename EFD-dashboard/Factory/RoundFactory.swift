@@ -7,11 +7,13 @@
 
 import Foundation
 
+import Foundation
+
 class RoundFactory {
-    static func round(from json: [String: Any]) -> Round? {
+    static func createRound(from json: [String: Any]) -> Round? {
         guard let id = json["_id"] as? String,
               let dateString = json["date"] as? String,
-              let deliveriesData = json["deliveries"] as? [String] else {
+              let deliveriesData = json["deliveries"] as? [[String: Any]] else {
             return nil
         }
         
@@ -22,6 +24,13 @@ class RoundFactory {
             return nil
         }
         
-        return Round(id: id, date: date, driver: driverId, deliveries: deliveriesData)
+        var deliveries: [Delivery] = []
+        for deliveryData in deliveriesData {
+            if let delivery = DeliveryFactory.createDelivery(from: deliveryData) {
+                deliveries.append(delivery)
+            }
+        }
+        
+        return Round(id: id, date: date, deliveries: deliveries)
     }
 }

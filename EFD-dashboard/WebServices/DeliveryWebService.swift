@@ -26,7 +26,7 @@ class DeliveryWebService {
                 return
             }
             
-            let deliveries = json.compactMap(DeliveryFactory.delivery(from:))
+            let deliveries = json.compactMap(DeliveryFactory.createDelivery(from:))
             completion(deliveries, nil)
         }
         task.resume()
@@ -49,7 +49,7 @@ class DeliveryWebService {
                 return
             }
             
-            let delivery = DeliveryFactory.delivery(from: json)
+            let delivery = DeliveryFactory.createDelivery(from: json)
             completion(delivery, nil)
         }
         task.resume()

@@ -67,6 +67,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <accessibility key="accessibilityConfiguration" identifier="TourCell"/>
             <connections>
                 <outlet property="TourCard" destination="TF5-Rg-boN" id="z6e-ID-mrd"/>
                 <outlet property="TourDate" destination="3Ae-Fk-Vyc" id="IkM-dU-Rch"/>

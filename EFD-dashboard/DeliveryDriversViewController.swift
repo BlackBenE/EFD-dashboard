@@ -14,7 +14,6 @@ class DeliveryDriversViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet var allDriversLabel: UILabel!
     @IBOutlet var allDriversTableView: UITableView!
     var allDrivers: [Driver]?
-    var activeDriver: [Driver]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,6 @@ class DeliveryDriversViewController: UIViewController, UITableViewDataSource, UI
 
         DriversWebService.getAll { [weak self] allDrivers, err in
             self?.allDrivers = allDrivers
-            self?.activeDriver = allDrivers
             
             DispatchQueue.main.async {
                 self?.allDriversTableView.reloadData()

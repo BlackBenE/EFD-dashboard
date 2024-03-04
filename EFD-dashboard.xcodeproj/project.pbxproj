@@ -26,6 +26,10 @@
 		A01A09932B953AEA0059AC60 /* TourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A01A09912B953AE90059AC60 /* TourTableViewCell.xib */; };
 		A01A09962B954F260059AC60 /* TourDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A09942B954F260059AC60 /* TourDetailsViewController.swift */; };
 		A01A09972B954F270059AC60 /* TourDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A01A09952B954F260059AC60 /* TourDetailsViewController.xib */; };
+		A01A09992B9574550059AC60 /* AdressFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A09982B9574550059AC60 /* AdressFactory.swift */; };
+		A01A099B2B95754B0059AC60 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A099A2B95754B0059AC60 /* PhotoData.swift */; };
+		A01A099E2B959A220059AC60 /* CreateTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A099C2B959A220059AC60 /* CreateTourViewController.swift */; };
+		A01A099F2B959A220059AC60 /* CreateTourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A01A099D2B959A220059AC60 /* CreateTourViewController.xib */; };
 		A09F67722B8A6D0500973BD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F67712B8A6D0500973BD3 /* TabBarController.swift */; };
 		A09F67752B8AA06F00973BD3 /* DeliveryDriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F67732B8AA06F00973BD3 /* DeliveryDriversViewController.swift */; };
 		A09F67762B8AA06F00973BD3 /* DeliveryDriversViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09F67742B8AA06F00973BD3 /* DeliveryDriversViewController.xib */; };
@@ -75,6 +79,10 @@
 		A01A09912B953AE90059AC60 /* TourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TourTableViewCell.xib; sourceTree = "<group>"; };
 		A01A09942B954F260059AC60 /* TourDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailsViewController.swift; sourceTree = "<group>"; };
 		A01A09952B954F260059AC60 /* TourDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TourDetailsViewController.xib; sourceTree = "<group>"; };
+		A01A09982B9574550059AC60 /* AdressFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressFactory.swift; sourceTree = "<group>"; };
+		A01A099A2B95754B0059AC60 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
+		A01A099C2B959A220059AC60 /* CreateTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTourViewController.swift; sourceTree = "<group>"; };
+		A01A099D2B959A220059AC60 /* CreateTourViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTourViewController.xib; sourceTree = "<group>"; };
 		A09F67712B8A6D0500973BD3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A09F67732B8AA06F00973BD3 /* DeliveryDriversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDriversViewController.swift; sourceTree = "<group>"; };
 		A09F67742B8AA06F00973BD3 /* DeliveryDriversViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryDriversViewController.xib; sourceTree = "<group>"; };
@@ -149,6 +157,8 @@
 				A09F67772B8AA09C00973BD3 /* TourViewController.swift */,
 				A09F67782B8AA09C00973BD3 /* TourViewController.xib */,
 				A01A09942B954F260059AC60 /* TourDetailsViewController.swift */,
+				A01A099C2B959A220059AC60 /* CreateTourViewController.swift */,
+				A01A099D2B959A220059AC60 /* CreateTourViewController.xib */,
 				A01A09952B954F260059AC60 /* TourDetailsViewController.xib */,
 				A01A09902B953AE90059AC60 /* TourTableViewCell.swift */,
 				A01A09912B953AE90059AC60 /* TourTableViewCell.xib */,
@@ -176,6 +186,7 @@
 				A09F67962B8B834F00973BD3 /* Driver.swift */,
 				A09F67982B8B837700973BD3 /* Photo.swift */,
 				A09F679A2B8B842E00973BD3 /* Round.swift */,
+				A01A099A2B95754B0059AC60 /* PhotoData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 				A01A09882B9460920059AC60 /* DeliveryFactory.swift */,
 				A01A098C2B94AC300059AC60 /* RoundFactory.swift */,
 				A01A098E2B94AF320059AC60 /* PhotoFactory.swift */,
+				A01A09982B9574550059AC60 /* AdressFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				A00654CA2B7C124700E84604 /* LaunchScreen.storyboard in Resources */,
 				A09F67822B8AA5E000973BD3 /* SplitViewController.xib in Resources */,
 				A09F677E2B8AA0C500973BD3 /* DeliveriesViewController.xib in Resources */,
+				A01A099F2B959A220059AC60 /* CreateTourViewController.xib in Resources */,
 				A09F67762B8AA06F00973BD3 /* DeliveryDriversViewController.xib in Resources */,
 				A00654C72B7C124700E84604 /* Assets.xcassets in Resources */,
 				A0D985292B7C20340015D564 /* HomeViewController.xib in Resources */,
@@ -294,6 +307,7 @@
 				A09F67722B8A6D0500973BD3 /* TabBarController.swift in Sources */,
 				A09F67912B8B826C00973BD3 /* Admin.swift in Sources */,
 				A00654BE2B7C124500E84604 /* AppDelegate.swift in Sources */,
+				A01A09992B9574550059AC60 /* AdressFactory.swift in Sources */,
 				A09F677D2B8AA0C500973BD3 /* DeliveriesViewController.swift in Sources */,
 				A01A09922B953AE90059AC60 /* TourTableViewCell.swift in Sources */,
 				A01A097F2B9452290059AC60 /* DriversWebService.swift in Sources */,
@@ -303,6 +317,7 @@
 				A09F678F2B8B820E00973BD3 /* Adress.swift in Sources */,
 				A01A09812B9458860059AC60 /* CustomerWebService.swift in Sources */,
 				A09F67972B8B834F00973BD3 /* Driver.swift in Sources */,
+				A01A099E2B959A220059AC60 /* CreateTourViewController.swift in Sources */,
 				A09F679E2B8B93C800973BD3 /* DriverDetailsViewController.swift in Sources */,
 				A01A09792B92A6D10059AC60 /* AdminWebService.swift in Sources */,
 				A09F679B2B8B842E00973BD3 /* Round.swift in Sources */,
@@ -314,6 +329,7 @@
 				A09F67952B8B82F600973BD3 /* Delivery.swift in Sources */,
 				A09F67812B8AA5E000973BD3 /* SplitViewController.swift in Sources */,
 				A01A097D2B944B260059AC60 /* DriverFactory.swift in Sources */,
+				A01A099B2B95754B0059AC60 /* PhotoData.swift in Sources */,
 				A01A098B2B9460D80059AC60 /* DeliveryWebService.swift in Sources */,
 				A01A09872B945B0C0059AC60 /* CustomerFactory.swift in Sources */,
 				A09F678C2B8AC2BE00973BD3 /* DeliveryDriversTableViewCell.swift in Sources */,

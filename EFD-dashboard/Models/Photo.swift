@@ -7,40 +7,31 @@
 
 import Foundation
 
-class Photo {
+class Photo: Codable {
+    var _id: String
     var date: Date
-    var photo: PhotoData
+    var photo: PhotoData?
     var trackingId: String
     
-    init(date: Date, photo: PhotoData, trackingId: String) {
+    enum CodingKeys: String, CodingKey {
+        case _id
+        case date
+        case photo
+        case trackingId
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        _id = try container.decode(String.self, forKey: ._id)
+        date = try container.decode(Date.self, forKey: .date)
+        photo = try container.decodeIfPresent(PhotoData.self, forKey: .photo)
+        trackingId = try container.decode(String.self, forKey: .trackingId)
+    }
+    
+    init(_id: String, date: Date, photo: PhotoData? = nil, trackingId: String) {
+        self._id = _id
         self.date = date
         self.photo = photo
         self.trackingId = trackingId
-    }
-}
-
-class PhotoData {
-    var data: Data
-    var contentType: String
-    
-    init(data: Data, contentType: String) {
-        self.data = data
-        self.contentType = contentType
-    }
-}
-
-
-extension Photo {
-    func toDictionary() -> [String: Any] {
-        let dateFormatter = ISO8601DateFormatter()
-        let dateString = dateFormatter.string(from: date)
-        return ["date": dateString, "photo": photo.toDictionary(), "trackingId": trackingId]
-    }
-}
-
-extension PhotoData {
-    func toDictionary() -> [String: Any] {
-        let dataString = data.base64EncodedString()
-        return ["data": dataString, "contentType": contentType]
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Admin {
+class Admin: Codable {
     var id: String?
     var firstName: String?
     var lastName: String?

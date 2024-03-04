@@ -7,18 +7,20 @@
 
 import Foundation
 
-class Address {
+class Address: Codable {
     var subThoroughfare: String
     var thoroughfare: String
     var locality: String
     var postalCode: String
     var country: String
+   
     
-    init(subThoroughfare: String, thoroughfare: String, locality: String, postalCode: String, country: String) {
+    init(subThoroughfare: String, thoroughfare: String, locality: String, postalCode: String, country: String, x: String, y: String) {
         self.subThoroughfare = subThoroughfare
         self.thoroughfare = thoroughfare
         self.locality = locality
         self.postalCode = postalCode
         self.country = country
+        
     }
 }

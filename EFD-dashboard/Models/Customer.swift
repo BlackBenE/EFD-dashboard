@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Customer {
-    var id: String
+class Customer: Codable {
+    var id : String?
     var firstName: String
     var lastName: String
     var email: String
@@ -17,7 +17,18 @@ class Customer {
     var address: Address
     var role: String
     
-    init(id: String, firstName: String, lastName: String, email: String, password: String? = nil, phoneNumber: String, address: Address, role: String) {
+    enum CodingKeys: String, CodingKey {
+          case id = "_id"
+          case firstName
+          case lastName
+          case email
+          case password
+          case phoneNumber
+          case address
+          case role
+      }
+    
+    init(id: String? = nil, firstName: String, lastName: String, email: String, password: String? = nil, phoneNumber: String, address: Address, role: String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
@@ -26,11 +37,5 @@ class Customer {
         self.phoneNumber = phoneNumber
         self.address = address
         self.role = role
-    }
-}
-
-extension Customer {
-    func toDictionary() -> [String: Any] {
-        return ["id": id, "firstname": firstName, "lastName": lastName,"email": email,"phoneNumber": phoneNumber,"address": address ]
     }
 }

@@ -7,28 +7,35 @@
 
 import Foundation
 
-class PhotoFactory {
-    static func createPhoto(from json: [String: Any]) -> Photo? {
-        let dateFormatter = ISO8601DateFormatter()
 
-        guard let dateString = json["date"] as? String,
-              let date = dateFormatter.date(from: dateString),
-              let trackingId = json["trackingId"] as? String,
-              let photoData = json["photo"] as? [String: Any],
-              let photo = createPhotoData(from: photoData) else {
-            return nil
-        }
-        
-        return Photo(date: date, photo: photo, trackingId: trackingId)
-    }
+class PhotoFactory {
     
-    private static func createPhotoData(from json: [String: Any]) -> PhotoData? {
-        guard let base64String = json["data"] as? String,
-              let data = Data(base64Encoded: base64String),
-              let contentType = json["contentType"] as? String else {
+    class func photoFromJSON(from data: [String: Any]?) -> Photo? {
+            
+        guard let photoData = data,
+              let id = photoData["_id"] as? String,
+              let dateString = photoData["date"] as? String,
+              let photoContentData = photoData["photo"] as? [String: Any],
+              let trackingId = photoData["trackingId"] as? String else {
+            print("PhotoFactory::photoFromJSON Failed to parse data")
             return nil
         }
         
-        return PhotoData(data: data, contentType: contentType)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        guard let date = dateFormatter.date(from: dateString) else {
+            print("PhotoFactory::photoFromJSON Failed to parse date")
+            return nil
+        }
+        
+        guard let buffer = photoContentData["data"] as? String,
+              let contentType = photoContentData["contentType"] as? String else {
+            print("PhotoFactory::photoFromJSON Failed to parse buffer")
+            return nil
+        }
+        
+        let _photoData = PhotoData(data: buffer, contentType: contentType)
+        print("photoData parsed id : \(id)")
+        return Photo(_id: id, date: date, photo: _photoData, trackingId: trackingId)
     }
 }

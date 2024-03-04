@@ -7,23 +7,30 @@
 
 import Foundation
 
-class CustomerFactory{
-    static func customer(from json: [String: Any]) -> Customer? {
-           guard let data = json["data"] as? [String: Any],
-                 let id = data["_id"] as? String,
-                 let firstName = data["firstName"] as? String,
-                 let lastName = data["lastName"] as? String,
-                 let email = data["email"] as? String,
-                 let phoneNumber = data["phoneNumber"] as? String,
-                 let address = data["address"] as? Address,
-                 let role = data["role"] as? String else {
-               // Si les données nécessaires ne sont pas présentes, signaler une erreur avec une assertion
-               assertionFailure("Données manquantes pour créer un objet Driver")
-               fatalError("Impossible de créer un objet Driver")
-           }
-           
-        let customer = Customer(id: id, firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber, address: address, role: role)
-        return customer
-       }
+class CustomerFactory {
     
+    class func customerFromJSON(from json: [String: Any]) -> Customer? {
+        guard let firstName = json["firstName"] as? String,
+              let lastName = json["lastName"] as? String,
+              let email = json["email"] as? String,
+              let phoneNumber = json["phoneNumber"] as? String,
+              let role = json["role"] as? String,
+              let addressData = json["address"] as? [String: Any],
+              let address = AddressFactory.createAddress(from: addressData) else {
+            print("CustomerFactory::customerFromJSON Failed to parse data")
+            return nil
+        }
+        let id = json["_id"] as? String
+        let password = json["password"] as? String
+        return Customer(
+            id: id, 
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password,
+            phoneNumber: phoneNumber,
+            address: address,
+            role: role
+        )
+    }
 }

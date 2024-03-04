@@ -6,27 +6,29 @@
 //
 
 import Foundation
+import MapKit
 
-
-
-class Delivery {
-    var id: String
+class Delivery: Codable {
+    var _id: String
     var photo: Photo?
     var customer: Customer
-
-    init(id: String, photo: Photo? = nil, customer: Customer) {
-        self.id = id
+    
+    enum CodingKeys: String, CodingKey {
+        case _id
+        case photo
+        case customer
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        _id = try container.decode(String.self, forKey: ._id)
+        photo = try container.decodeIfPresent(Photo.self, forKey: .photo)
+        customer = try container.decode(Customer.self, forKey: .customer)
+    }
+    
+    init(_id: String, photo: Photo? = nil, customer: Customer) {
+        self._id = _id
         self.photo = photo
         self.customer = customer
-    }
-}
-
-extension Delivery {
-    func toDictionary() -> [String: Any] {
-        var dictionary = ["customer": customer.toDictionary()]
-        if let photo = photo {
-            dictionary["photo"] = photo.toDictionary()
-        }
-        return dictionary
     }
 }

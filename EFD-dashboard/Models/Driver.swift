@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Driver {
+class Driver: Codable {
     var id: String?
     var firstName: String
     var lastName: String

@@ -71,7 +71,7 @@ class RoundWebService {
     
     // Create new round
     class func create(round: Round, completion: @escaping (Round?, Error?) -> Void) {
-        guard let url = URL(string: "http://localhost:3000/rounds") else {
+        guard let url = URL(string: "http://localhost:3000/round") else {
             return
         }
         
@@ -172,7 +172,7 @@ class RoundWebService {
         task.resume()
     }
     
-    // Assign round to delivery person
+    // Assign driver
         class func assign(round: Round, to driver: Driver, completion: @escaping (Round?, Error?) -> Void) {
             guard let url = URL(string: "http://localhost:3000/round/\(round.id)") else {
                 return

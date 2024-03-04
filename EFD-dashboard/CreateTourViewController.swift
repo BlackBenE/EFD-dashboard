@@ -30,50 +30,53 @@ class CreateTourViewController: UIViewController {
     }
     
     
-    @IBAction func AddDelivery(_ sender: UIButton) {
-        guard let deliveryId = DeliveryTextField.text else {
-            return
-        }
-        DeliveryWebService.getOne(id: deliveryId) { delivery, error in
-            guard let delivery = delivery else {
-                // Handle error
-                return
-            }
-            
-            self.deliveries.append(delivery)
-        }
-    }
-    
     
     @IBAction func CreateButton(_ sender: UIButton) {
-        guard let driverId = DriverFirstName.text else {
-            return
-        }
-        
-        DriversWebService.getOne(id: driverId) { driver, error in
-            guard let driver = driver else {
-                // Handle error
-                return
-            }
-            
-            let newRound = Round(id: "", date: Date(), deliveries: self.deliveries, driver: driver)
-            
-            RoundWebService.create(round: newRound) { createdRound, error in
-                DispatchQueue.main.async {
-                    if let error = error {
-                        let alert = UIAlertController(title: "Erreur", message: "Échec de la création de la tournée : \(error)", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default))
-                        self.present(alert, animated: true)
-                    } else {
-                        let alert = UIAlertController(title: "Succès", message: "Tournée créée avec succès", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                            self.dismiss(animated: true, completion: nil)
-                        }))
-                        self.present(alert, animated: true)
+        guard let driverId = DriverFirstName.text, let deliveryId = DeliveryTextField.text, let deliveryDateString = DeliveryDate.text else {
+               print("Error: Missing driver ID, delivery ID, or delivery date")
+               return
+           }
+           
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" 
+           guard let deliveryDate = dateFormatter.date(from: deliveryDateString) else {
+               print("Error: Invalid delivery date")
+               return
+           }
+                
+                DriversWebService.getOne(id: deliveryId) { driver, error in
+                    guard let driver = driver else {
+                        // Handle error
+                        return
+                    }
+                    
+                    DeliveryWebService.getOne(id: deliveryId) { delivery, error in
+                        guard let delivery = delivery else {
+                            // Handle error
+                            return
+                        }
+                        
+                        self.deliveries.append(delivery)
+                        
+                        let newRound = Round(id: "", date: deliveryDate, deliveries: self.deliveries, driver: driver)
+                        
+                        RoundWebService.create(round: newRound) { createdRound, error in
+                            DispatchQueue.main.async {
+                                if let error = error {
+                                    let alert = UIAlertController(title: "Erreur", message: "Échec de la création de la tournée : \(error)", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                                    self.present(alert, animated: true)
+                                } else {
+                                    let alert = UIAlertController(title: "Succès", message: "Tournée créée avec succès", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                                        self.dismiss(animated: true, completion: nil)
+                                    }))
+                                    self.present(alert, animated: true)
+                                }
+                            }
+                        }
                     }
                 }
             }
-        }
-    }
 }
                 

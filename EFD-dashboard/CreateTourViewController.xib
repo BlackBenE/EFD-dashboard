@@ -72,21 +72,10 @@
                                 <action selector="CreateButton:" destination="-1" eventType="touchUpInside" id="GCD-su-sdQ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvS-9O-aT9">
-                            <rect key="frame" x="818" y="274" width="55" height="35"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="tintColor" red="0.92380841629999999" green="0.92380841629999999" blue="0.92380841629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Add"/>
-                            <connections>
-                                <action selector="AddDelivery:" destination="-1" eventType="touchUpInside" id="zgP-at-59U"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBrownColor"/>
                     <constraints>
                         <constraint firstItem="SZh-2f-cbX" firstAttribute="top" secondItem="PYv-Nr-Hkx" secondAttribute="top" constant="98" id="4Sy-MI-DQg"/>
-                        <constraint firstItem="YvS-9O-aT9" firstAttribute="leading" secondItem="tIK-KS-vTE" secondAttribute="trailing" constant="52" id="8ez-hw-ZeV"/>
                         <constraint firstAttribute="trailing" secondItem="SZh-2f-cbX" secondAttribute="trailing" constant="309" id="BOP-Qm-IB5"/>
                         <constraint firstItem="MlV-UW-jpN" firstAttribute="leading" secondItem="aW3-X6-ESm" secondAttribute="trailing" constant="81" id="FLa-wP-xEn"/>
                         <constraint firstItem="iXg-b7-8n8" firstAttribute="leading" secondItem="PYv-Nr-Hkx" secondAttribute="leading" constant="8" id="I9X-qJ-fhY"/>
@@ -95,7 +84,6 @@
                         <constraint firstAttribute="trailing" secondItem="iXg-b7-8n8" secondAttribute="trailing" constant="8" id="RPV-am-RLA"/>
                         <constraint firstItem="tIK-KS-vTE" firstAttribute="top" secondItem="PYv-Nr-Hkx" secondAttribute="top" constant="267" id="Tj8-pW-kWz"/>
                         <constraint firstItem="zXu-5a-ros" firstAttribute="leading" secondItem="PYv-Nr-Hkx" secondAttribute="leading" constant="199" id="W95-bT-6aH"/>
-                        <constraint firstItem="iXg-b7-8n8" firstAttribute="top" secondItem="YvS-9O-aT9" secondAttribute="bottom" constant="35" id="YmN-l8-zVl"/>
                         <constraint firstItem="zXu-5a-ros" firstAttribute="top" secondItem="PYv-Nr-Hkx" secondAttribute="top" constant="274" id="ay4-Sg-vch"/>
                         <constraint firstItem="iXg-b7-8n8" firstAttribute="top" secondItem="tIK-KS-vTE" secondAttribute="bottom" constant="43" id="bLW-Tw-zUV"/>
                         <constraint firstItem="SZh-2f-cbX" firstAttribute="leading" secondItem="HMi-bw-OXt" secondAttribute="trailing" constant="71" id="cSm-oa-9EY"/>
@@ -104,7 +92,6 @@
                         <constraint firstItem="HMi-bw-OXt" firstAttribute="top" secondItem="PYv-Nr-Hkx" secondAttribute="top" constant="105" id="fnC-od-IGt"/>
                         <constraint firstItem="bG0-cr-gug" firstAttribute="top" secondItem="PYv-Nr-Hkx" secondAttribute="top" constant="18" id="itn-7y-XDN"/>
                         <constraint firstAttribute="bottom" secondItem="iXg-b7-8n8" secondAttribute="bottom" constant="8" id="n7g-sf-te4"/>
-                        <constraint firstAttribute="trailing" secondItem="YvS-9O-aT9" secondAttribute="trailing" constant="202" id="nn6-3E-IS4"/>
                         <constraint firstItem="bG0-cr-gug" firstAttribute="leading" secondItem="PYv-Nr-Hkx" secondAttribute="leading" constant="965" id="nrw-Pz-lFI"/>
                         <constraint firstItem="tIK-KS-vTE" firstAttribute="leading" secondItem="zXu-5a-ros" secondAttribute="trailing" constant="88" id="onI-zQ-vAt"/>
                         <constraint firstItem="MlV-UW-jpN" firstAttribute="top" secondItem="PYv-Nr-Hkx" secondAttribute="top" constant="183" id="vaP-ry-RFO"/>
